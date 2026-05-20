@@ -9,3 +9,7 @@ D:\BaocaoKetThucMon\letrongbaocms_solution\CMS.Data\obj\Debug\net8.0\CMS.Data.dl
 D:\BaocaoKetThucMon\letrongbaocms_solution\CMS.Data\obj\Debug\net8.0\refint\CMS.Data.dll
 D:\BaocaoKetThucMon\letrongbaocms_solution\CMS.Data\obj\Debug\net8.0\CMS.Data.pdb
 D:\BaocaoKetThucMon\letrongbaocms_solution\CMS.Data\obj\Debug\net8.0\ref\CMS.Data.dll
+D:\BaocaoKetThucMon\letrongbaocms_solution\CMS.Data\bin\Debug\net8.0\CMS.Data.runtimeconfig.json
+D:\BaocaoKetThucMon\letrongbaocms_solution\CMS.Data\obj\Debug\net8.0\CMS.Data.csproj.AssemblyReference.cache
+D:\BaocaoKetThucMon\letrongbaocms_solution\CMS.Data\obj\Debug\net8.0\CMS.Data.sourcelink.json
+D:\BaocaoKetThucMon\letrongbaocms_solution\CMS.Data\obj\Debug\net8.0\CMS.Data.genruntimeconfig.cache
