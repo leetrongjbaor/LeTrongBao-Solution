@@ -1,75 +1,76 @@
-﻿@model IEnumerable<CMS.Data.Entities.User>
+﻿@model IEnumerable<CMS.Data.Entities.User> // Thay bằng namespace thực tế của thực thể User
+
+@{
+    ViewData["Title"] = "Quản lý thành viên";
+}
 
 <div class="container mt-4">
-
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="text-dark">
-            QUẢN LÝ THÀNH VIÊN
-        </h2>
-
-        <button class="btn btn-success btn-sm">
-            + Thêm thành viên mới
-        </button>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-uppercase" style="color: #2b2b2b;">Quản lý thành viên</h2>
+        <a href="#" class="btn btn-success btn-sm px-3 py-2 fw-semibold">
+            <i class="bi bi-plus-lg"></i> + Thêm thành viên mới
+        </a>
     </div>
 
-    <table class="table table-hover shadow-sm border">
-
-        <thead class="table-light">
-            <tr>
-                <th>ID</th>
-                <th>Tên đăng nhập</th>
-                <th>Họ và tên</th>
-                <th>Quyền hạn</th>
-                <th>Thao tác</th>
-            </tr>
-        </thead>
-
-        <tbody>
-
-            @foreach (var user in Model)
-            {
-                <tr>
-
-                    <td>@user.Id</td>
-
-                    <td>
-                        <strong>@user.Username</strong>
-                    </td>
-
-                    <td>@user.FullName</td>
-
-                    <td>
-
-                        @if (user.Role == "Administrator")
-                        {
-                            <span class="badge bg-danger">
-                                @user.Role
-                            </span>
-                        }
-                        else
-                        {
-                            <span class="badge bg-info text-dark">
-                                @user.Role
-                            </span>
-                        }
-
-                    </td>
-
-                    <td>
-                        <button class="btn btn-sm btn-outline-warning">
-                            Sửa
-                        </button>
-
-                        <button class="btn btn-sm btn-outline-danger">
-                            Xóa
-                        </button>
-                    </td>
-
-                </tr>
-            }
-
-        </tbody>
-
-    </table>
-
+    <div class="card shadow-sm border-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light text-secondary">
+                    <tr>
+                        <th class="ps-3" style="width: 80px;">ID</th>
+                        <th>Tên Đăng Nhập</th>
+                        <th>Họ Và Tên</th>
+                        <th>Quyền Hạn</th>
+                        <th class="text-center" style="width: 150px;">Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td class="ps-3 fw-bold text-secondary">@user.Id</td>
+                            <td class="fw-bold text-dark">@user.Username</td>
+                            <td>@user.FullName</td>
+                            <td>
+                                @if (user.Role == "Administrator")
+                                {
+                                    <span class="badge bg-danger px-2 py-1 fs-7">@user.Role</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-info text-white px-2 py-1 fs-7">@user.Role</span>
+                                }
+                            </td>
+                            <td class="text-center">
+                                <div class="btn-group gap-1">
+                                    <a href="#" class="btn btn-outline-warning btn-sm px-2 py-0" style="font-size: 0.85rem;">Sửa</a>
+                                    <a href="#" class="btn btn-outline-danger btn-sm px-2 py-0" style="font-size: 0.85rem;">Xóa</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
+
+<style>
+    /* CSS tinh chỉnh để giống giao diện mẫu của bạn */
+    .table th {
+        font-weight: 600;
+        text-transform: none;
+        background-color: #f8f9fa !important;
+    }
+
+    .table td {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 4px;
+    }
+</style>
