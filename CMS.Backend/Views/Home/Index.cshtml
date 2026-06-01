@@ -2,7 +2,73 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome Le Trong Bao 2123110056</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div class="container mt-5">
+
+    <div class="text-center mb-5">
+        <span class="badge bg-info text-dark mb-3 fs-6 px-3 py-2">
+            <i class="bi bi-mortarboard-fill me-1"></i> MSSV: 2123110056
+        </span>
+        <h1 class="display-5 fw-bold text-primary">Chào mừng, Lê Trọng Bảo</h1>
+        <p class="text-muted">Hệ thống quản lý nội dung — ASP.NET Core MVC</p>
+        <div class="d-flex justify-content-center gap-2 flex-wrap mt-2">
+            <span class="badge bg-light text-dark border">ASP.NET Core</span>
+            <span class="badge bg-light text-dark border">Entity Framework</span>
+            <span class="badge bg-light text-dark border">Bootstrap 5</span>
+            <span class="badge bg-light text-dark border">SQL Server</span>
+        </div>
+    </div>
+
+   
+    <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+        <div class="col">
+            <div class="card text-center border-0 bg-light h-100 py-3">
+                <div class="fs-2 fw-bold text-primary">6</div>
+                <div class="text-muted small">Module</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center border-0 bg-light h-100 py-3">
+                <div class="fs-2 fw-bold text-success">3</div>
+                <div class="text-muted small">Entity CMS</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center border-0 bg-light h-100 py-3">
+                <div class="fs-2 fw-bold text-warning">3</div>
+                <div class="text-muted small">Entity Shop</div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-center border-0 bg-light h-100 py-3">
+                <div class="fs-2 fw-bold text-danger">MVC</div>
+                <div class="text-muted small">Kiến trúc</div>
+            </div>
+        </div>
+    </div>
+
+   
+    <h5 class="fw-bold text-primary mb-3">📰 Quản lý CMS</h5>
+    <div class="row row-cols-1 row-cols-md-3 g-3 mb-4">
+        <div class="col">
+            <div class="card h-100 border shadow-sm">
+                <div class="card-body">
+                    <h6 class="card-title fw-bold">👤 Thành viên</h6>
+                    <p class="card-text text-muted small">Quản lý tài khoản, phân quyền Admin / Editor / Moderator.</p>
+                    <a asp-controller="User" asp-action="Index" class="btn btn-outline-primary btn-sm">Xem danh sách</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 border shadow-sm">
+                <div class="card-body">
+                    <h6 class="card-title fw-bold">📁 Danh mục</h6>
+                    <p class="card-text text-muted small">Quản lý danh mục bài viết trên hệ thống CMS.</p>
+                    <a asp-controller="Category" asp-action="Index" class="btn btn-outline-success btn-sm">Xem danh sách</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 border shadow-sm">
+                <div class="card-body">
+                    <h6 class="card-title fw-bold">📝 Bài viết</h6>
+                    <p class="card-text text-muted small">Quản lý
